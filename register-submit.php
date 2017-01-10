@@ -13,6 +13,7 @@ $password = $_POST['password'];
 
 $sql = "INSERT INTO students (name, email, password, id)
 VALUES ('$name', '$email', '$password', '')";
+
 $result = mysqli_query($conn, $sql);
 
 header("Location: start.php");

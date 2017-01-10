@@ -7,7 +7,8 @@ if (is_correct_password($name, $pw)) {
 	session_start();
 	$_SESSION["name"] = $name;
 
-	header("Location: snippets.php");
+	#redirect to this page after successful login
+	header("Location: profile.php");
 	die();
 } else {
 	print "Incorrect Login!";
