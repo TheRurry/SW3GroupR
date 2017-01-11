@@ -4,7 +4,7 @@
 	CSE 190 M, Spring 2012
 	-->
 	<head>
-		<title>Springfield Elementary School</title>
+		<title>Web Security Project</title>
 		<link href="simpsons.css" type="text/css" rel="stylesheet" />
 	</head>
 
@@ -13,7 +13,7 @@
 			<img src="simpsons.png" alt="logo" />
 		</div>
 
-		<h1>Springfield Elementary Web Site</h1>
+		<h1>Web Security Project</h1>
 
 		<ul>
 			<!-- Comment out the register page. It doesn't exist.
