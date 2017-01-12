@@ -81,7 +81,7 @@
                     <div class="site-heading">
                         <h1>Recent Posts</h1>
                         <hr class="small">
-                        <span class="subheading">Recently submitted Blog posts by User</span>
+                        <span class="subheading">Recently submitted Blog posts</span>
                     </div>
                 </div>
             </div>
