@@ -53,8 +53,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.php">Log in</a></li>
-					<li><a href="register.php">Register</a></li>
+                    <li><a href="login.php?re=1">Log in</a></li>
+					          <li><a href="register.php?re=1">Register</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,9 +69,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>New Account</h1>
+                        <h1>Create Account</h1>
                         <hr class="small">
-                        <span class="subheading">Please fill in all of the fields</span>
+                        <span class="subheading">Start posting your snippets today!</span>
                     </div>
                 </div>
             </div>
@@ -79,52 +79,60 @@
     </header>
 
     <!-- Main Content -->
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<p>Please register a new account.</p>
-				<form id="register" action="register-submit.php" method="post">
-				  <div class="row control-group">
-					  <div class="form-group col-xs-12 floating-label-form-group controls">
-						  <label>Username</label>
-						  <input type="text" class="form-control" placeholder="Username" name="name">
-						  <p class="help-block text-danger"></p>
-					  </div>
-				  </div>
-				  
-				  <div class="row control-group">
-					  <div class="form-group col-xs-12 floating-label-form-group controls">
-						  <label>Email</label>
-						  <input class="form-control" type="email" placeholder="Email" name="email"></input>
-						  <p class="help-block text-danger"></p>
-					  </div>
-				  </div>
-				  
-				  <div class="row control-group">
-					  <div class="form-group col-xs-12 floating-label-form-group controls">
-						  <label>Password</label>
-						  <input class="form-control" type="password" placeholder="Password" name="password"></input>
-						  <p class="help-block text-danger"></p>
-					  </div>
-				  </div>
-				  
-				  <br>
-				  <div id="success"></div>
-				  <div class="row">
-					  <div class="form-group col-xs-12">
-						  <button type="submit" class="btn btn-default">Log in</button>
-						  <!-- Pager -->
-						  <ul class="pager">
-							  <li class="previous">
-								  <a href="">Return to top &uarr;</a>
-							  </li>
-						  </ul>
-					  </div>
-				  </div>
-				</form>
-            </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		      <p>
+            <?php
+              if($_GET["re"] == 0) {
+                echo "Username taken.";
+              } else {
+                echo "Please register a new account.";
+              }
+            ?>
+          </p>
+		<form id="register" action="register-submit.php" method="post">
+		  <div class="row control-group">
+			  <div class="form-group col-xs-12 floating-label-form-group controls">
+				  <label>Username</label>
+				  <input type="text" class="form-control" placeholder="Username" name="name">
+				  <p class="help-block text-danger"></p>
+			  </div>
+		  </div>
+
+		  <div class="row control-group">
+			  <div class="form-group col-xs-12 floating-label-form-group controls">
+				  <label>Email</label>
+				  <input class="form-control" type="email" placeholder="Email" name="email"></input>
+				  <p class="help-block text-danger"></p>
+			  </div>
+		  </div>
+
+		  <div class="row control-group">
+			  <div class="form-group col-xs-12 floating-label-form-group controls">
+				  <label>Password</label>
+				  <input class="form-control" type="password" placeholder="Password" name="password"></input>
+				  <p class="help-block text-danger"></p>
+			  </div>
+		  </div>
+
+		  <br>
+		  <div id="success"></div>
+		  <div class="row">
+			  <div class="form-group col-xs-12">
+				  <button type="submit" class="btn btn-default">Submit</button>
+				  <!-- Pager -->
+				  <ul class="pager">
+					  <li class="previous">
+						  <a href="">Return to top &uarr;</a>
+					  </li>
+				  </ul>
+			  </div>
+		  </div>
+		</form>
         </div>
     </div>
+</div>
 
     <hr>
 

@@ -5,7 +5,10 @@
   }
   session_start();
   $userid = $_POST["userid"];
-  $username = $_POST["username"];
+  $username = ucwords($_POST["username"]);
+  if($username == "") {
+    $username = $_SESSION["name"];
+  }
   $c_pw = $_POST["current_password"];
   $n_pw = $_POST["new_password"];
 

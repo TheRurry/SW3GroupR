@@ -53,8 +53,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.php">Log in</a></li>
-					<li><a href="register.php">Register</a></li>
+                    <li><a href="login.php?re=1">Log in</a></li>
+					          <li><a href="register.php?re=1">Register</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -100,7 +100,7 @@
                                 <?= $row["content"] ?>
                             </h3>
                         </a>
-                        <p class="post-meta">Posted by <a href="login.php"><?=$temp_username?></a> on <?=$temp_date ?></p>
+                        <p class="post-meta">Posted by <a href="login.php?re=1"><?=$temp_username?></a> on <?=$temp_date ?></p>
                     </div>
                     <hr>
                     <?php

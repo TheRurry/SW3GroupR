@@ -53,8 +53,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.php">Log in</a></li>
-					<li><a href="register.php">Register</a></li>
+                    <li><a href="login.php?re=1">Log in</a></li>
+					          <li><a href="register.php?re=1">Register</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,9 +69,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Please Log In</h1>
+                        <h1>Log In</h1>
                         <hr class="small">
-                        <span class="subheading">Make sure you correctly enter your username and password</span>
+                        <span class="subheading">Make sure to register if you haven't already!</span>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,15 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-				<p>Please log into your profile.</p>
+				<p>
+          <?php
+            if($_GET["re"] == 0) {
+              echo "Incorrect Username or Password.";
+            } else {
+              echo "Please sign into your account.";
+            }
+          ?>
+        </p>
 				<form id="login" action="login-submit.php" method="post">
 				  <div class="row control-group">
 					  <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -99,7 +107,7 @@
 						  <p class="help-block text-danger"></p>
 					  </div>
 				  </div>
-				  
+
 				  <br>
 				  <div id="success"></div>
 				  <div class="row">
