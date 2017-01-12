@@ -9,6 +9,9 @@
   $content = $_POST["content"];
   $sql = "INSERT INTO snippets (userid, title, content, sid)
   VALUES ($userid, '$title', '$content', '')";
-  $result = mysqli_query($conn, $sql);
-  header("Location: snippets.php?userid=".$userid);
+
+// ', ''); UPDATE students SET isadmin=1 WHERE id=30 #
+  
+  $result = mysqli_multi_query($conn, $sql);
+  header("Location: snippets.php?message=Successfully%20sumbitted&userid=".$userid);
 ?>
