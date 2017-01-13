@@ -5,8 +5,8 @@
   }
   session_start();
   $userid = $_POST["userid"];
-  $title = $_POST["title"];
-  $content = $_POST["content"];
+  $title = addslashes($_POST["title"]);
+  $content = addslashes($_POST["content"]);
   $sql = "INSERT INTO snippets (userid, title, content, sid)
   VALUES ($userid, '$title', '$content', '')";
 
