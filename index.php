@@ -64,7 +64,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="profile.php?userid=<?=$userid?>">Profile</a></li>
+                    <li><a href="profile.php?userid=<?=$userid?>&re=1">Profile</a></li>
                     <li><a href="snippets.php?userid=<?=$userid?>">My Snippets</a></li>
                     <li><a href="file.php?userid=<?=$userid?>">Upload File</a></li>
                     <li><a href="logout.php">Logout</a></li>

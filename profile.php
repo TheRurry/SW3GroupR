@@ -61,7 +61,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="profile.php?userid=<?=$userid?>">Profile</a></li>
+                    <li><a href="profile.php?userid=<?=$userid?>&re=1">Profile</a></li>
                     <li><a href="snippets.php?userid=<?=$userid?>">My Snippets</a></li>
                     <li><a href="file.php?userid=<?=$userid?>">Upload File</a></li>
                     <li><a href="logout.php">Logout</a></li>
@@ -101,7 +101,19 @@
                   $username_of_profile = $temp_db->fetchColumn();
                   if($username == $username_of_profile) {
                     ?>
-                    <p>Fill out the form below to configure account details!</p>
+                    <p>
+                      <?php
+                        if($_GET["re"] == -1) {
+                          echo "Incorrect password, please try again.";
+                        } else if($_GET["re"] == 0) {
+                          echo "Username taken.";
+                        } else if($_GET["re"] == 17) {
+                          echo "Profile successfully updated.";
+                        } else {
+                          echo "Fill out the form below to configure account details!";
+                        }
+                      ?>
+                    </p>
                     <form id="edit_user" action="profile_submit.php" method="post">
                       <input type="hidden" value ="<?=$userid?>" class="form-control" name="userid" readonly>
                       <div class="row control-group">
