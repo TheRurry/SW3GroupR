@@ -99,27 +99,25 @@
                 <?php
                   $temp_db = $db->query("SELECT name FROM students WHERE students.id = '$userid';");
                   $username_of_profile = $temp_db->fetchColumn();
-                  if($username == $username_of_profile) {
-                    ?>
-                    <p>A link will be provided to the newly uploaded file!</p>
-                    <form id="upload_file" action="upload.php" method="post" enctype="multipart/form-data">
-                      <div class="row control-group">
-                          <div class="form-group col-xs-12 floating-label-form-group controls">
-                              <label>File</label>
-                              <input type="file" name="fileToUpload" id="fileToUpload">
-                              <p class="help-block text-danger"></p>
-                          </div>
-                      </div>
-                      <br>
-                      <div id="success"></div>
-                      <div class="row">
-                          <div class="form-group col-xs-12">
-                              <button type="submit" class="btn btn-default" name="submit">Upload &rang;</button>
-                          </div>
-                      </div>
-                    </form>
-                    <?php
-                  }
+					?>
+					<p>A link will be provided to the newly uploaded file!</p>
+					<form id="upload_file" action="upload.php" method="post" enctype="multipart/form-data">
+					  <div class="row control-group">
+						  <div class="form-group col-xs-12 floating-label-form-group controls">
+							  <label>File</label>
+							  <input type="file" name="fileToUpload" id="fileToUpload">
+							  <p class="help-block text-danger"></p>
+						  </div>
+					  </div>
+					  <br>
+					  <div id="success"></div>
+					  <div class="row">
+						  <div class="form-group col-xs-12">
+							  <button type="submit" class="btn btn-default" name="submit">Upload &rang;</button>
+						  </div>
+					  </div>
+					</form>
+					<?php
                 ?>
 
                 <?php
