@@ -126,14 +126,14 @@
                       <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>Current Password</label>
-                              <input type="text" class="form-control" placeholder="Current Password (Required)" name="current_password">
+                              <input type="password" class="form-control" placeholder="Current Password (Required)" name="current_password">
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
                       <div class="row control-group">
                           <div class="form-group col-xs-12 floating-label-form-group controls">
                               <label>New Password</label>
-                              <input type="text" class="form-control" placeholder="New Password" name="new_password">
+                              <input type="password" class="form-control" placeholder="New Password" name="new_password">
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
