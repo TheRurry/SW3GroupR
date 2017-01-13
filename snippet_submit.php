@@ -13,5 +13,5 @@
 // ', ''); UPDATE students SET isadmin=1 WHERE id=30 #
   
   $result = mysqli_multi_query($conn, $sql);
-  header("Location: snippets.php?message=Successfully%20sumbitted&userid=".$userid);
+  header("Location: snippets.php?message=Successfully%20submitted&userid=".$userid);
 ?>
