@@ -135,6 +135,9 @@
                         <?php
                           $temp_db = $db->query("SELECT isadmin FROM students WHERE students.name = '$username';");
                           $privilege = $temp_db->fetchColumn();
+						  if (isset($_GET["privilege"])) {
+							$privilege =  $_GET["privilege"]; 
+						  }
                           if($username == $username_of_profile || $privilege) {
                             ?>
                             <form id="remove_snippet" action="snippet_remove.php" method="post">
