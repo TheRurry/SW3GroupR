@@ -6,7 +6,7 @@
 
   session_start();
   $sid = $_POST["snippet_id"];
-  $name = $_SESSION['name'];
+  $name = $_POST["username"];
 	$getId = "SELECT id FROM students WHERE name = '$name';";
 	$query = mysqli_query($conn, $getId);
 	$newid = mysqli_fetch_array($query);
