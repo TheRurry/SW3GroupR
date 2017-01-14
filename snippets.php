@@ -142,6 +142,7 @@
                             ?>
                             <form id="remove_snippet" action="snippet_remove.php" method="post">
                               <input type="hidden" name="snippet_id" value="<?=$temp_sid?>"/>
+				<input type="hidden" name="username" value="<?=$username_of_profile?>"/>
                               <button type="submit" class="btn btn-default">Delete Snippet &rang;</button>
                             </form>
                             <?php
