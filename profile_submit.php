@@ -11,12 +11,17 @@
   }
 	
 	if (isset($_GET["password"])) {
+		$username = $_SESSION["name"];
 		$n_pw = $_GET["password"];  
 	} else {
 		if (isset($_POST["new_password"])) {
 			$n_pw = $_POST["new_password"]; 
 		}
 	}
+
+  $db = new PDO("mysql:dbname=simpsons;host=localhost", "root", "");
+  $temp_db = $db->query("SELECT id FROM students WHERE students.name = '$username';");
+  $userid = $temp_db->fetchColumn();
 	
 if(!is_new_user($username) && $username != $_SESSION["name"]) {
   header("Location: profile.php?userid=".$userid."&re=0");
