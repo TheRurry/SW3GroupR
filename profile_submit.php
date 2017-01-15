@@ -37,19 +37,6 @@ if(!is_new_user($username) && $username != $_SESSION["name"]) {
 	header("Location: profile.php?userid=".$userid."&re=17");
 }
 
-  function is_correct_password($id, $pw) {
-  	$db = new PDO("mysql:dbname=simpsons", "root", "");
-  	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  	$rows = $db->query("SELECT password FROM students WHERE id = '$id';");
-  	foreach ($rows as $row) {
-  		$correct_password = $row["password"];
-  		if ($pw == $correct_password) {
-  			return TRUE;
-  		}
-  	}
-  	return FALSE;
-  }
-
   function is_new_user($username) {
     $db = new PDO("mysql:dbname=simpsons", "root", "");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
